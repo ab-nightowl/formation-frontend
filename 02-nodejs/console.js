@@ -49,11 +49,10 @@ function gererChoixUtilisateur() {
 		  		rl.question("Entrez un id de session svp : ", (idSession) => {
 		  			var session = moduleService.trouverSession(`${idSession}`);
 		  			console.log('Description : ', session.desc, '\nPrésentateur : ', session.speakers);
+		  			
 		  			rl.close();
-
 			  		afficherMenu();
 					gererChoixUtilisateur();
-		  		
 		  		});
 		  		break;
 
