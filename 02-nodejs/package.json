@@ -1,0 +1,19 @@
+{
+  "name": "app-console",
+  "version": "1.0.0",
+  "description": "application console nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ab-nightowl/formation-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ab-nightowl/formation-frontend/issues"
+  },
+  "homepage": "https://github.com/ab-nightowl/formation-frontend#readme"
+}
