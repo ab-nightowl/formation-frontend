@@ -7,16 +7,12 @@ villes.forEach(function(ville) {
 var lettreADansToutesLesVilles = function(ville) {
 	return ville.includes('a');
 }
-if (villes.every(lettreADansToutesLesVilles)) {
-	console.log('lettreADansToutesLesVilles == true');
-}
+console.log('lettreADansToutesLesVilles == ' + villes.every(lettreADansToutesLesVilles));
 
 var auMoinsUneVilleAvecUnTiret = function(ville) {
 	return ville.includes('-');
 }
-if (villes.some(auMoinsUneVilleAvecUnTiret)) {
-	console.log('auMoinsUneVilleAvecUnTiret == true');
-}
+console.log('auMoinsUneVilleAvecUnTiret == ' + villes.some(auMoinsUneVilleAvecUnTiret));
 
 var villesSansTiretSansEspace = function(ville) {
 	return !ville.includes('-', ' ');
