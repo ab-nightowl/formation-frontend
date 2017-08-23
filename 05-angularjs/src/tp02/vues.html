@@ -1,0 +1,23 @@
+<section id="tp02">
+	<h1>TP 02 - Vues et Expressions</h1>
+	<select ng-model="show">
+		<option value=""></option>
+		<option value="true">affiché</option>
+		<option value="false">caché</option>
+	</select>
+	
+	<p ng-show="show == 'true'">Ce texte est affiché</p>
+	<p ng-hide="show != 'false'">Ce texte est affiché si ... caché</p>
+	<p ng-if="show == 'true'">Créé uniquement si show=true</p>
+
+	<div ng-switch on="show">
+		<div ng-switch-when="true">Affiché</div>
+		<div ng-switch-when="false">Caché</div>
+		<div ng-switch-default="">Par défaut</div>
+	</div>
+
+	<div ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+		<p>Item N° {{item}}</p>
+	</div>
+	
+</section>

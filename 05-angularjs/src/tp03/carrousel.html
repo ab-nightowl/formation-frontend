@@ -1,0 +1,13 @@
+<section ng-controller="CarrouselCtrl as ctrl" id="tp03">
+	<h1>TP 03 - Carrousel d'images</h1>
+	
+	<div>
+		<button ng-click="ctrl.previous()">Previous</button>
+		<button ng-click="ctrl.next()">Next</button>
+	</div>
+	
+	<div>
+		<img ng-src="{{ctrl.images[ctrl.currentId]['url']}}" alt="">
+	</div>
+
+</section>
