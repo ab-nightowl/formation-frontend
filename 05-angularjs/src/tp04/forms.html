@@ -32,16 +32,19 @@
 	<!-- Test 3 : validation -->
 	<!-- TODO : ajouter une validation Angular avec affichage des erreurs et
 	utilisation des classes CSS -->
-	<form name="form3">
+	<form id="form3" name="form3" novalidate>
 		Name: <input type="text" ng-model="ctrl.user3.name" name="uName" required/><br>
-		<p ng-show="form3.uName.$dirty && form3.uName.$error.required">Invalid: Tell us your name</p>
-		<p ng-show="form3.uName.$dirty && form3.uName.$error.required">Errors: {{form3.uName.$error}}</p>
+		<div ng-show="form3.uName.$dirty">
+			<p ng-show="form3.uName.$error.required">Invalid: Tell us your name</p>
+			<p ng-show="form3.uName.$error.required">Errors: {{form3.uName.$error}}</p>
+		</div>
 
 		E-mail: <input type="email" ng-model="ctrl.user3.email" name="uEmail" required/><br>
-		<p ng-show="form3.uEmail.$dirty && form3.uEmail.$error.required">Invalid: Tell us your email</p>
-		<p ng-show="form3.uEmail.$dirty && form3.uEmail.$invalid">Invalid: This is not a valid email</p>
-		
-		<p ng-show="(form3.uEmail.$dirty && form3.uEmail.$error.required) || (form3.uEmail.$dirty && form3.uEmail.$error.email)">Errors: {{form3.uEmail.$error}}</p>
+		<div ng-show="form3.uEmail.$dirty && form3.uEmail.$invalid">
+			<p ng-show="form3.uEmail.$error.required">Invalid: Tell us your email</p>
+			<p ng-show="form3.uEmail.$invalid">Invalid: This is not a valid email</p>
+			<p ng-show="form3.uEmail.$error.required || form3.uEmail.$error.email">Errors: {{form3.uEmail.$error}}</p>
+		</div>
 	</form>
 
 </section>

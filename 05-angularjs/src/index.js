@@ -1,6 +1,5 @@
 import angular from "angular";
 
-
 // récupération de la page HTML ./tp01/expressions.html à l'aide de Webpack
 import tplTp01 from './tp01/expressions.html'
 import tp2Tp02 from './tp02/vues.html'

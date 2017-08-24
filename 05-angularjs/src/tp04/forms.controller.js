@@ -1,3 +1,5 @@
+import './forms.css';
+
 export default class FormsController {
 	
 	constructor() {
