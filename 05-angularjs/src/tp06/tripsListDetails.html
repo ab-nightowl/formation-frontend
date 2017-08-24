@@ -1,0 +1,27 @@
+<section id="tp06" ng-controller="TripsListDetailsController as ctrl">
+	<h1>TP 06 - Communication avec $resource</h1>
+	
+	<form name="ctrl.form">
+		<ul ng-init="ctrl.getTrips()">
+			
+			<li ng-repeat="trip in ctrl.trips" ng-init="tImage = false">
+				<p> {{trip.name}} - {{trip.price}}€ </p>
+				
+				<!-- <p>{{ctrl.errorUpdate}}</p>
+				<p>{{ctrl.successUpdate}}</p>
+				 -->
+				
+				<img ng-click="tImage = !tImage" ng-src="{{trip.imageUrl}}" alt="img-{{trip.name}}">
+
+				<textarea ng-show="tImage" name="" id="" cols="30" rows="10">{{trip.description}}
+				</textarea>
+				<br>
+				<button type="submit" ng-click="ctrl.updateTrip(trip)">Update</button>
+				
+			</li>
+			
+		</ul>
+	</form>
+
+	
+</section>
