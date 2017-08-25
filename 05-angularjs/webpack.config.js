@@ -41,5 +41,14 @@ module.exports = {
             { test: /\.html$/, exclude: [/node_modules/], use: 'raw-loader'},
 
         ]
-    }
+    },
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+            Popper:'popper.js'
+            })
+    ]
 };
