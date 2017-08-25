@@ -20,5 +20,11 @@ export default class TripsCommmentsController {
 		})
 	}
 
+	submitComment(tripId, comment) {
+		this.CommentsService.addComment(tripId, comment)
+			.then(r => {
+				this.select(tripId);
+			})
+	}
 	
 }

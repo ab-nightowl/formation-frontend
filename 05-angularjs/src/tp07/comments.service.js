@@ -17,9 +17,16 @@ export default function CommentsService(apiUrls, $resource) {
 
 			let tripResourceTrouve = tripResource.get({tripId: tripId})
 
-			tripResourceTrouve.$promise.then(r => {
-				r.comments.push(comment)
-				r.$update()
+			return tripResourceTrouve.$promise.then(r => {
+				if (!r.comments) {
+					r.comments = []
+				}
+
+				r.comments.push({
+					id: "anonyme",
+					text: comment.text
+				})
+				return r.$update()
 			})
 		}
 	}

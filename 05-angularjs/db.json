@@ -45,6 +45,10 @@
         {
           "id": "jean49",
           "text": "J'ai détesté"
+        },
+        {
+          "id": "anonyme",
+          "text": "aaaaaa"
         }
       ],
       "steps": [
@@ -148,7 +152,13 @@
       "geolocation": {
         "latitude": 41.89292,
         "longitude": 12.48252
-      }
+      },
+      "comments": [
+        {
+          "id": "anonyme",
+          "text": "fffffff"
+        }
+      ]
     },
     {
       "id": "rio-de-janeiro",

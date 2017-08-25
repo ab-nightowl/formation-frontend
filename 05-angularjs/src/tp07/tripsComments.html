@@ -6,7 +6,7 @@
 		<option ng-repeat="trip in ctrl.trips" value="{{trip.id}}">{{trip.name}}</option>
 	</select>
 	
-	<br>
+	<br><br>
 
 	<img ng-repeat="step in ctrl.steps" ng-src="{{step.imageUrl}}" alt="img-{{step.name}}">
 
@@ -14,8 +14,18 @@
 
 	<ul>
 		<li ng-repeat="comment in ctrl.comments">
+			
 			<p>{{comment.id}} : {{comment.text}}</p>
+
 		</li>
 	</ul>
+
+	<br>
+
+	<textarea ng-model="ctrl.comment.text" ng-show="ctrl.tripId" name="" id="" cols="30" rows="10"></textarea>
+
+	<br>
+	
+	<button ng-click="ctrl.submitComment(ctrl.tripId, ctrl.comment)" ng-show="ctrl.tripId">Comment</button>
 	
 </section>
