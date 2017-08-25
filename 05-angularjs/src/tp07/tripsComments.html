@@ -1,0 +1,21 @@
+<section id="tp07" ng-controller="TripsCommmentsController as ctrl">
+	<h1>TP 07 - Services</h1>
+	
+	<select ng-model="ctrl.tripId" ng-change="ctrl.select(ctrl.tripId)" >
+		<option value=""></option>
+		<option ng-repeat="trip in ctrl.trips" value="{{trip.id}}">{{trip.name}}</option>
+	</select>
+	
+	<br>
+
+	<img ng-repeat="step in ctrl.steps" ng-src="{{step.imageUrl}}" alt="img-{{step.name}}">
+
+	<br>
+
+	<ul>
+		<li ng-repeat="comment in ctrl.comments">
+			<p>{{comment.id}} : {{comment.text}}</p>
+		</li>
+	</ul>
+	
+</section>

@@ -7,7 +7,8 @@
 		<ul ng-init="ctrl.getTrips()">
 			
 			<li ng-repeat="trip in ctrl.trips">
-				<input type="text" name="tName{{trip.id}}" ng-model="trip.name" value="trip.name">-<input type="text" name="tPrice{{trip.id}}" ng-model="trip.price" value="trip.price"> 
+				
+				<input type="text" name="tName{{trip.id}}" ng-model="trip.name" value="trip.name">-<input type="text" name="tPrice{{trip.id}}" ng-model="trip.price" value="trip.price"> €
 				
 				<button type="submit" ng-show="ctrl.form['tName'+trip.id].$dirty || ctrl.form['tPrice'+trip.id].$dirty" ng-click="ctrl.updateTrip(trip)">Save</button>
 				
