@@ -10,8 +10,9 @@ export default class RaceService {
 	}
 	
 	update(name, progress) {
-		let walker = this.walkers.find(walker => walker.name == name)
-		walker.progress += progress
+		this.walkers.forEach(w => {
+			if (w.name == name) w.progress += progress
+		})
 	}
 	
 	list() {
