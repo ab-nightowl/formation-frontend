@@ -27,6 +27,11 @@ import TripsService from "./tp07/trips.service";
 import CommentsService from "./tp07/comments.service";
 import StepsService from "./tp07/steps.service";
 
+import PizzaCtrl from "./tp-unit-tests/pizza.controller";
+import PizzaService from "./tp-unit-tests/pizza.service";
+import PizzaComponent from "./tp-unit-tests/pizza.component";
+import PizzaRemoteService from "./tp-unit-tests/pizza.remote.service";
+
 // insertion du code HTML dans le corps de la page principale
 document.querySelector('body').innerHTML = [tplTp01, tp2Tp02, tp3Tp03, tp4Tp04, tp5Tp05, tp6Tp06, tp7Tp07, tp8Tp08].join('<hr>')
 
@@ -36,14 +41,11 @@ angular.module('tripApp', ['ngResource', 'raceModule', 'simulatorModule'])
 	.controller(TripsListController.name, TripsListController)
 	.controller(TripsListDetailsController.name, TripsListDetailsController)
 	.controller(TripsCommmentsController.name, TripsCommmentsController)
+	.controller(PizzaCtrl.name, PizzaCtrl)
+	.component('pizCmp', PizzaComponent)
 	.constant('apiUrls', apiUrls)
 	.service('TripsService', TripsService)
 	.service('StepsService', StepsService)
+	.service(PizzaService.name, PizzaService)
+	.service(PizzaRemoteService.name, PizzaRemoteService)
 	.factory('CommentsService', CommentsService)
-	.run((CommentsService, StepsService) => {
-
-		CommentsService.findByTripId('paris').then(comments => console.log(comments))
-		StepsService.findStepsByTripId('paris').then(steps => console.log(steps))
-
-	})
-
